@@ -12,6 +12,8 @@ You can see the live version of this playground at [https://alexguerra-dev.githu
 
 - [x] Setup repository
 - [x] Make live website
+- [ ] Organize folder structure
+- [ ] Add data to the project
 - [ ] Add more content
 - [ ] Add more features
 - [ ] Add more tests
