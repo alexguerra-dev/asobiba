@@ -8,20 +8,32 @@ You can see the live version of this playground at [https://alexguerra-dev.githu
 
 ## Goals
 
+The main goal of the project is to have fun and learn more about [p5js site](https://p5js.org/).
+
 ## Tasks
 
 - [x] Setup repository
 - [x] Make live website
-- [ ] Organize folder structure
-- [ ] Add data to the project
+- [x] Organize folder structure
+- [x] Add favicon
+  - [x] Test favicon on local and live site
+- [x] Add data to the project
 - [ ] Add more content
 - [ ] Add more features
 - [ ] Add more tests
 - [ ] Add more documentation
+  - [ ] Make documentation folder
+  - [ ] Add documentation to the project
 - [ ] Add more examples
 - [ ] Add more tutorials
 - [ ] Add more resources
 - [ ] Add more links
+
+## Documentation
+
+- [p5js site](https://p5js.org/)
+- [p5js reference](https://p5js.org/reference/)
+- [My Notes](doc/p5js.md)
 
 ---
 
