@@ -1,10 +1,10 @@
-let imageOfLizard
+// let imageOfLizard
 let font
 let tick
 
 function preload() {
     font = loadFont('data/fonts/OpenSans-Regular.ttf')
-    imageOfLizard = loadImage('data/images/bobing.gif')
+    // imageOfLizard = loadImage('data/images/bobing.gif')
 }
 
 function setup() {
@@ -20,5 +20,6 @@ function setup() {
 }
 
 function draw() {
-    background(0)
+    fill(0)
+    rect(100, 0, 200, 200)
 }
