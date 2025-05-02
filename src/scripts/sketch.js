@@ -18,26 +18,14 @@ function setup() {
 
     // This makes a list of points from a font, text, and size.
     // The total number of points representing the text.
-    points = font.textToPoints(
-        `I think teresa is a pretty great person ${3}`,
-        0,
-        0,
-        16,
-        {
-            sampleFactor: 0.1,
-            simplifyThreshold: 0,
-        },
-    )
+    points = font.textToPoints('Hello World', 0, 0, 100, {
+        sampleFactor: 0.1,
+        simplifyThreshold: 0,
+    })
 }
 
 function draw() {
-    background(255)
-    points.forEach((point) => {
-        // Draw each point as a circle
-        fill(255, 0, 0, 100)
-        // noStroke()
-        ellipse(point.x + 0.5 * mouseX, point.y + 0.5 * mouseY, 10, 10)
-    })
+    background(0)
     push()
     translate(0.5 * width, 0.5 * height)
     rotate(45)
