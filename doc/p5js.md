@@ -4,6 +4,8 @@
 
 `frameRate()` is a function that allows you to set or get the current frame rate of the sketch. The default frame rate is 60 frames per second, but you can change it to any value you want.
 
+`noFill()` is a function that disables the filling of shapes. When you call `noFill()`, any shapes you draw will only have an outline and no fill color. This is useful when you want to create shapes that are only outlined, such as circles or rectangles.
+
 ```javascript
 function setup() {
   createCanvas(400, 400)

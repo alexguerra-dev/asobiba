@@ -4,9 +4,10 @@
 
 ### Things that I would like to implement
 
-- [ ] When focused on the explorer `a` to create a new file
+- [x] When focused on the explorer `a` to create a new file
 - [ ] When focused on the explorer `d` to delete a file
-- [ ] When focused on the explorer `Shift + a` to create a new folder
+- [x] When focused on the explorer `Shift + a` to create a new folder
+- [ ] Note: When work in `.md` files, `cmd +b` will bold the text, but I want it to toggle the sidebar.
 
 ````json
 {
