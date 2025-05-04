@@ -1,6 +1,7 @@
 let imageOfLizard
 let font
 let setOfNodes = []
+let theSystem
 
 function preload() {
     font = loadFont('data/fonts/OpenSans-Regular.ttf')
@@ -15,9 +16,49 @@ function setup() {
     textAlign(CENTER, CENTER)
 
     setOfNodes = Array.from({ length: 15 }, (_, i) => {
-        console.log(i)
         return new Node(random(width), random(height))
     })
+
+    theSystem = new System()
+
+    setOfNodes.forEach((node) => {
+        theSystem.addNode(node)
+    })
+}
+
+class System {
+    constructor() {
+        this.nodes = []
+    }
+
+    addNode(node) {
+        this.nodes.push(node)
+    }
+
+    update() {
+        this.nodes.forEach((node) => {
+            node.update()
+        })
+    }
+
+    display() {
+        this.nodes.forEach((node, index, array) => {
+            node.display()
+
+            // rect(node.x, array[index + 1], 10, 10)
+
+            if (index === 0) {
+                // line(
+                //     node.x + array[index - 1].x,
+                //     node.y + array[index - 1].y,
+                //     node.x + 10,
+                //     node.y + 10,
+                // )
+            } else {
+                line(array[index - 1].x, array[index - 1].y, node.x, node.y)
+            }
+        })
+    }
 }
 
 class Node {
@@ -35,35 +76,31 @@ class Node {
     }
     display() {
         this.update()
-        // fill(200)
+        fill(200, 100, 78, 100)
         // background(0)
         push()
         fill(255, 100, 78, 100)
-        // noFill()
+        noFill()
         // stroke(255)
-        // strokeWeight(2)
-        ellipse(this.x, this.y, this.size)
-        ellipse(this.x, this.y, this.size * 0.5)
+        strokeWeight(2)
+        fill(255, 100)
+        fill(noise(this.x * 0.01, this.y * 0.01) * 255, 100, 78, 100)
+
         pop()
+        push()
+        // rotate(noise(this.x * 0.0001, this.y * 0.0001) * TWO_PI)
+        // translate(100, 30)
+        ellipse(this.x, this.y, this.size * 0.5)
+        fill(255, 100, 78)
+        ellipse(this.x, this.y, (this.size * 0.2 * mouseX) / 100)
+        pop()
+        // line(this.x, this.y, mouseX, mouseY)
     }
 }
 
 function draw() {
     background(255, 100)
-    // fill(0, 100)
-    console.log(setOfNodes)
-
-    setOfNodes.forEach((node, index, array) => {
-        node.display()
-
-        // if (index == 0) {
-        //     line(node.x, node.y, mouseX, mouseY)
-        // }
-        // if (index === array.length - 1) {
-        //     line(node.x, node.y, array[0].x, array[0].y)
-        // }
-        // line(node.x, node.y, mouseX, mouseY)
-    })
-
+    theSystem.update()
+    theSystem.display()
     // node1.display()
 }
