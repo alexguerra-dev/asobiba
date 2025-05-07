@@ -1,5 +1,6 @@
 let imageOfLizard
 let font
+let testNode
 
 function preload() {
     font = loadFont('data/fonts/OpenSans-Regular.ttf')
@@ -9,6 +10,10 @@ function preload() {
 function setup() {
     createCanvas(windowWidth, windowHeight)
     frameRate(30)
+    testNode = new BasicNode()
+    noLoop()
+    console.log(testNode)
+    testNode.draw(this)
 }
 
 function draw() {
