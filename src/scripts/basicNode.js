@@ -11,6 +11,7 @@
  * @property {string} nodeType - The type of the node.
  * @property {Array} neighbors - Array of neighboring nodes.
  * @method draw - Draws the node on the canvas using p5.js.
+ * @method addNeighbor - Adds a neighboring node to the node's neighbors array.
  * @example
  * const node = new BasicNode(50, 100, 'TypeA');
  * node.draw(p5Instance);
